@@ -1,6 +1,6 @@
 # 🎮 CheckPoint
 
-Track your Steam journey. Know exactly where you stand.
+Own your progress. Track your Steam journey.
 
 CheckPoint is a modern Flutter application that integrates with the Steam Web API to help players monitor their current game, total playtime, achievement progress, and completion percentage — all in a clean and focused experience.
 
