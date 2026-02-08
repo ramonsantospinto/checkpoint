@@ -36,17 +36,23 @@ CheckPoint is built using:
 - **Mason (Feature scaffolding)**
 - **Firebase Cloud Functions (Secure Steam API Proxy)**
 
-Project structure:
+## 🏗 Project Architecture
 
+The project adopts a feature-first Clean Architecture structure:
 lib/
-core/
-features/
-auth/
-library/
-achievements/
+├── core/
+└── features/
+├── auth/
+├── library/
+└── achievements/
 
+Each feature is organized into:
 
-The architecture was designed to scale as a production-ready application.
+- **data** (API, models, repositories)
+- **domain** (entities, use cases)
+- **presentation** (controllers, providers, UI)
+
+This structure enables scalability, testability, and production-level maintainability.
 
 ---
 
