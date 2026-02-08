@@ -1,3 +1,4 @@
+import 'package:checkpoint/core/providers/app_providers.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'routes/app_router.dart';

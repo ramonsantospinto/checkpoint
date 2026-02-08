@@ -1,14 +1,28 @@
 import 'package:flutter/foundation.dart';
+import '../../../../core/storage/secure_storage.dart';
 
 class AuthController extends ChangeNotifier {
-  bool _loading = false;
-  String? _error;
+  SecureStore? _store;
 
-  bool get loading => _loading;
-  String? get error => _error;
+  String? _steamId;
+  String? get steamId => _steamId;
 
-  Future<void> init() async {}
+  void attachStore(SecureStore store) => _store = store;
 
-  void setLoading(bool v) { _loading = v; notifyListeners(); }
-  void setError(String? v) { _error = v; notifyListeners(); }
+  Future<void> init() async {
+    _steamId = await _store?.readSteamId();
+    notifyListeners();
+  }
+
+  Future<void> setSteamId(String steamId64) async {
+    _steamId = steamId64;
+    await _store?.saveSteamId(steamId64);
+    notifyListeners();
+  }
+
+  Future<void> logout() async {
+    _steamId = null;
+    await _store?.clear();
+    notifyListeners();
+  }
 }
