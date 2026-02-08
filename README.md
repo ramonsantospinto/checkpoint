@@ -74,4 +74,12 @@ This ensures consistency, scalability, and maintainability.
 ## 👨‍💻 Author
 
 **Ramon Santos**  
+<<<<<<< HEAD
 Flutter Developer specializing in Clean Architecture and scalable mobile applications.
+=======
+Flutter Developer specializing in Clean Architecture and scalable mobile applications.
+
+
+
+
+>>>>>>> edd10f8784f6af91c835ec3f37d0f8412b90e095
