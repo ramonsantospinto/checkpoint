@@ -36,7 +36,7 @@ CheckPoint is built using:
 - **Mason (Feature scaffolding)**
 - **Firebase Cloud Functions (Secure Steam API Proxy)**
 
-## 🏗 Project Architecture
+## 🗂 Project Structure
 
 The project adopts a feature-first Clean Architecture structure:
 
