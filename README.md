@@ -71,12 +71,11 @@ mason make feature_clean_provider --feature_name achievements
 
 This ensures consistency, scalability, and maintainability.
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Ramon Santos
+**Ramon Santos**  
+Flutter Developer specializing in Clean Architecture and scalable mobile applications.
 
-Flutter Developer
-Architecture-focused, scalable application design.
 
 
 
