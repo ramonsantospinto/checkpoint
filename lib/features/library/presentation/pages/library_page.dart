@@ -11,7 +11,6 @@ class LibraryPage extends StatelessWidget {
     final auth = context.watch<AuthController>();
 
     if (auth.steamId == null) {
-      // fallback (o ideal é você ter redirect no router também)
       WidgetsBinding.instance.addPostFrameCallback((_) {
         context.go('/login');
       });
@@ -44,7 +43,9 @@ class LibraryPage extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(24),
                     border: Border.all(
-                      color: Theme.of(context).dividerColor.withOpacity(0.2),
+                      color: Theme.of(
+                        context,
+                      ).dividerColor.withValues(alpha: 0.2),
                     ),
                   ),
                   child: const Center(
@@ -75,11 +76,11 @@ class _HeaderCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(24),
         gradient: LinearGradient(
           colors: [
-            theme.colorScheme.primary.withOpacity(0.15),
-            theme.colorScheme.secondary.withOpacity(0.10),
+            theme.colorScheme.primary.withValues(alpha: 0.15),
+            theme.colorScheme.secondary.withValues(alpha: 0.10),
           ],
         ),
-        border: Border.all(color: theme.dividerColor.withOpacity(0.2)),
+        border: Border.all(color: theme.dividerColor.withValues(alpha: 0.2)),
       ),
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -109,7 +110,7 @@ class _HeaderCard extends StatelessWidget {
                   Text(
                     'SteamID64: $steamId',
                     style: theme.textTheme.bodySmall?.copyWith(
-                      color: theme.colorScheme.onSurface.withOpacity(0.7),
+                      color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
                     ),
                   ),
                 ],
