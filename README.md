@@ -42,11 +42,17 @@ The project adopts a feature-first Clean Architecture structure:
 
 ```
 lib/
-├── core/
-└── features/
-├── auth/
-├── library/
-└── achievements/
+ ├── app/
+ ├── core/
+ │    ├── config/
+ │    ├── network/
+ │    ├── providers/
+ │    └── storage/
+ └── features/
+      ├── achievements/
+      ├── auth/
+      ├── library/
+      └── now_playing/
 ```
 
 Each feature is organized into:
