@@ -40,12 +40,14 @@ CheckPoint is built using:
 
 The project adopts a feature-first Clean Architecture structure:
 
+```
 lib/
 ├── core/
 └── features/
 ├── auth/
 ├── library/
 └── achievements/
+```
 
 Each feature is organized into:
 
