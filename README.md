@@ -39,6 +39,7 @@ CheckPoint is built using:
 ## 🏗 Project Architecture
 
 The project adopts a feature-first Clean Architecture structure:
+
 lib/
 ├── core/
 └── features/
