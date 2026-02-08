@@ -1,0 +1,17 @@
+name: feature_clean_provider
+description: Feature Clean (data/domain/presentation) + Provider (ChangeNotifier) + Scope.
+version: 0.1.0
+
+environment:
+  mason: ^0.1.2
+
+vars:
+  feature_name:
+    type: string
+    description: "ex: auth, library, now_playing, achievements"
+  with_page:
+    type: boolean
+    default: true
+  with_controller:
+    type: boolean
+    default: true

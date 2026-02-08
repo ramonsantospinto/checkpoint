@@ -1,0 +1,5 @@
+bricks:
+  checkpoint_core:
+    path: mason_bricks/bricks/checkpoint_core
+  feature_clean_provider:
+    path: mason_bricks/bricks/feature_clean_provider

@@ -1,0 +1,14 @@
+name: checkpoint_core
+description: Core + app skeleton para o CheckPoint (Clean + Dio + Provider).
+version: 0.1.0
+
+environment:
+  mason: ^0.1.2
+
+vars:
+  app_name:
+    type: string
+    default: CheckPoint
+  bundle_scheme:
+    type: string
+    default: checkpoint

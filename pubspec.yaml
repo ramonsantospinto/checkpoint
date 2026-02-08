@@ -1,0 +1,63 @@
+name: checkpoint
+description: "O CheckPoint se conecta à API do Steam para exibir seu jogo atual, tempo total de jogo, progresso das conquistas e porcentagem geral de conclusão em uma experiência clara e organizada."
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.8
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.5+1
+  dio: ^5.9.1
+  flutter_secure_storage: ^10.0.0
+  go_router: ^17.1.0
+  flutter_web_auth_2: ^5.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  
+
+  flutter_lints: ^6.0.0
+  yaml: ^3.1.3
+
+flutter:  
+  uses-material-design: true
+
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
