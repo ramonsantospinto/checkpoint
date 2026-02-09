@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/foundation.dart';
 import '../../../../core/storage/secure_storage.dart';
 
@@ -7,7 +8,10 @@ class AuthController extends ChangeNotifier {
   String? _steamId;
   String? get steamId => _steamId;
 
-  void attachStore(SecureStore store) => _store = store;
+  void attachStore(SecureStore store) {
+    _store = store;
+    unawaited(init());
+  }
 
   Future<void> init() async {
     _steamId = await _store?.readSteamId();

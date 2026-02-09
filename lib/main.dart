@@ -1,40 +1,24 @@
-import 'package:checkpoint/features/auth/presentation/pages/auth_page.dart';
+import 'package:checkpoint/app/routes/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:provider/provider.dart';
-import 'core/storage/secure_storage.dart';
-import 'features/auth/presentation/controller/auth_controller.dart';
+import 'core/providers/app_providers.dart';
 
 void main() {
-  runApp(const CheckPointPreview());
+  runApp(const CheckPointApp());
 }
 
-class CheckPointPreview extends StatelessWidget {
-  const CheckPointPreview({super.key});
+class CheckPointApp extends StatelessWidget {
+  const CheckPointApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [
-        Provider<FlutterSecureStorage>(
-          create: (_) => const FlutterSecureStorage(),
-        ),
-        ProxyProvider<FlutterSecureStorage, SecureStore>(
-          update: (_, storage, _) => SecureStore(storage),
-        ),
-        ChangeNotifierProxyProvider<SecureStore, AuthController>(
-          create: (_) => AuthController(),
-          update: (_, store, controller) => controller!..attachStore(store),
-        ),
-      ],
-      child: MaterialApp(
+      providers: buildAppProviders(),
+      child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: 'CheckPoint',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: const LoginPage(),
+        theme: ThemeData(useMaterial3: true),
+        routerConfig: AppRouter.router,
       ),
     );
   }
